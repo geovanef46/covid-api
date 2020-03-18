@@ -1,0 +1,10 @@
+<p>
+	Course Name : </p><input type="text" [(ngModel)]=searchString>
+<button (click)="searchImages()">Search</button>
+<ul>
+	<li *ngFor="let image1 of imageSearch">
+		<img src="{{image1.countrydata.total_cases}}">
+	</li>
+</ul>
+
+<my-server></my-server>
