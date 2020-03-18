@@ -1,6 +1,13 @@
 <p>
-	Course Name : </p><input type="text" [(ngModel)]=searchString>
-<button (click)="searchImages()">Search</button>
+	Country (initials) : </p>
+  <select id="countrys" [(ngModel)]=searchString>
+  <option value="BR">BR</option>
+  <option value="US">US</option>
+  <option value="IT">IT</option>
+  <option value="CHN">CHN</option>
+</select>
+
+<button (click)="searchImages(value)">Search</button>
 <ul>
 	<li *ngFor="let image1 of imageSearch">
 		<img src="{{image1.countrydata.total_cases}}">
