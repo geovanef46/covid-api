@@ -2,7 +2,8 @@ p {
   font-family: Lato;
 }
 
-img{
-  height:50px;
-  width:50px;
+body{
+  align-content: center;
+  position: relative;
+  padding-left: 40%;
 }

@@ -9,16 +9,17 @@ import { Http , Response } from '@angular/http';
 export class AppComponent  {
   constructor(private http: Http){}
   searchString : String = '';
-  imageSearch = [];
-  searchImages(){
+  apiSearch = [];
+  searchApi(){
     const urlofApi= 'https://thevirustracker.com/free-api?countryTotal=' + this.searchString;
+    console.log(`Valor Pesquisado:${this.searchString}`)
     this.http.get(urlofApi)
     .subscribe(
       (res: Response) => 
         {
           const searchResult = res.json();  
           console.log(searchResult);
-          this.imageSearch = searchResult.items;
+          this.apiSearch = searchResult.items;
           //console.log(this.imageSearch.owner.avatar_url);
         }
     );
