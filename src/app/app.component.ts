@@ -19,7 +19,8 @@ export class AppComponent  {
         {
           const searchResult = res.json();  
           console.log(searchResult);
-          this.apiSearch = searchResult.items;
+          this.apiSearch = searchResult;
+          console.log(this.apiSearch);
           //console.log(this.imageSearch.owner.avatar_url);
         }
     );

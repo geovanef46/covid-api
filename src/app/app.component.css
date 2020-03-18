@@ -3,7 +3,10 @@ p {
 }
 
 body{
-  align-content: center;
   position: relative;
   padding-left: 40%;
+}
+
+tr{
+  display: block
 }
