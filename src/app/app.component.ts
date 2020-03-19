@@ -6,10 +6,11 @@ import { Http , Response } from '@angular/http';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
+export class AppComponent {
   constructor(private http: Http){}
   searchString : String = '';
-  apiSearch = [];
+  apiSearch : any;
+  dataload: boolean = false;
   searchApi(){
     const urlofApi= 'https://thevirustracker.com/free-api?countryTotal=' + this.searchString;
     console.log(`Valor Pesquisado:${this.searchString}`)
@@ -17,10 +18,15 @@ export class AppComponent  {
     .subscribe(
       (res: Response) => 
         {
-          const searchResult = res.json();  
-          console.log(searchResult);
+          const searchResult = res.json();
+          this.dataload = true;
+          if(res.ok){
+            this.apiSearch = {'erro': 'Atualizando dados... Sistema indisponível'}
+            return
+          }
+          console.log("Response server ...");
           this.apiSearch = searchResult;
-          console.log(this.apiSearch);
+          console.log(res);
           //console.log(this.imageSearch.owner.avatar_url);
         }
     );

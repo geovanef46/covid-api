@@ -2,11 +2,26 @@ p {
   font-family: Lato;
 }
 
-body{
-  position: relative;
-  padding: 20%;
+section,footer,li{
+  background-color:#FFF;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+select{
+  margin: 3px;
 }
 
+button:hover{
+  color: cornflowerblue ;
+}
+button:active,div:hover{
+  size: 10px;
+  background-color: #d0dee9;
+  box-shadow: 0 1px #666;
+  transform: translateY(5px);
+}
 div{
-  padding: 5px;
+  padding: 10px;
 }

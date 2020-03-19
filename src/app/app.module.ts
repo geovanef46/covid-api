@@ -9,9 +9,13 @@ import { ServerComponent } from './server-component/server.component';
 
 
 @NgModule({
+  
   imports:      [ BrowserModule, FormsModule,
   HttpModule],
   declarations: [ AppComponent, HelloComponent, ServerComponent ],
   bootstrap:    [ AppComponent ]
+  
 })
 export class AppModule { }
+
+
