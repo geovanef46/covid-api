@@ -1,6 +1,6 @@
 <body>
 <p>
-	Country (initials) : </p>
+	Select the Country: </p>
   <select id="countrys" [(ngModel)]=searchString>
   <option value="BR">BRASIL</option>
   <option value="US">USA</option>
@@ -11,11 +11,11 @@
 <button (click)="searchApi(value)">Search</button>
 <ul >
     <li *ngFor="let item of apiSearch.countrydata">
-      <h3>Resumo</h3>
-      <div>Total de casos: {{item.total_cases}}</div>
-      <div>Total de mortes: {{item.total_deaths}}</div>
-      <div>Casos descobertos hoje: {{item.total_new_cases_today}}</div>
-      <div>Mortes hoje: {{item.total_new_deaths_today}}</div>
+      <h3>Last Updates</h3>
+      <div>Total of Cases: {{item.total_cases}}</div>
+      <div>Total of Deaths: {{item.total_deaths}}</div>
+      <div>Discovery Cases hoje: {{item.total_new_cases_today}}</div>
+      <div>Deaths Today: {{item.total_new_deaths_today}}</div>
     </li>
 </ul>
 
